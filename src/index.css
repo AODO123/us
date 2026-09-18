@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper-base: #f6f1eb;
+    --paper-card: #fcfaf7;
+    --paper-border: #e4dbd0;
+    --ink: #2c2224;
+    --maroon: #7a1c2b;
+  }
+
+  body {
+    background-color: #f6f1eb;
+    color: #2c2224;
+    overflow-x: hidden;
+  }
+}
+
+/* Paper grain texture layer */
+.paper-texture {
+  background-color: #f6f1eb;
+  background-image:
+    radial-gradient(at 10% 20%, rgba(251, 232, 166, 0.12) 0px, transparent 40%),
+    radial-gradient(at 90% 85%, rgba(247, 214, 207, 0.18) 0px, transparent 45%),
+    radial-gradient(at 50% 50%, rgba(223, 215, 236, 0.10) 0px, transparent 60%);
+  position: relative;
+}
+
+.paper-grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Washi Tape Strip */
+.washi-tape {
+  background: rgba(251, 232, 166, 0.65);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+  position: relative;
+}
+
+.washi-tape::before,
+.washi-tape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: transparent;
+  border-right: 2px dashed rgba(220, 200, 150, 0.6);
+}
+
+.washi-tape::before {
+  left: -2px;
+}
+.washi-tape::after {
+  right: -2px;
+}
+
+/* Postage stamp decorative edge */
+.postage-edge {
+  background: #fcfaf7;
+  border: 2px dashed #e4dbd0;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Hand-drawn underline */
+.hand-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hand-underline::after {
+  content: '';
+  position: absolute;
+  left: -4%;
+  bottom: -4px;
+  width: 108%;
+  height: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20' preserveAspectRatio='none'%3E%3Cpath d='M0,12 Q25,4 50,14 T100,8' fill='none' stroke='%237A1C2B' stroke-width='3' stroke-linecap='round' opacity='0.75'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f1eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8cec2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9e2a3b;
+}
+
+/* Custom scrollbar for unfolded letter sheet */
+.custom-letter-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-letter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-letter-scroll::-webkit-scrollbar-thumb {
+  background: rgba(122, 28, 43, 0.2);
+  border-radius: 3px;
+}
+
+.custom-letter-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 28, 43, 0.5);
+}
+
