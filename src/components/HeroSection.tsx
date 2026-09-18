@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
   const timeTogether = useTimeTogether(SITE_CONTENT.couple.relationshipStartDate);
 
   return (
-    <section className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-4 sm:px-8 py-6 sm:py-8 overflow-hidden select-none">
+    <section className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-8 py-3 sm:py-8 overflow-hidden select-none">
       {/* ── Ambient Background Parallax Doodles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         {/* Soft pastel flower */}
@@ -66,7 +66,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
         transition={{ duration: 0.8, delay: 0.15 }}
         className="relative z-10 text-center"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-paper-card border border-paper-border text-maroon font-mono text-xs tracking-widest uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-paper-card border border-paper-border text-maroon font-mono text-[10px] sm:text-xs tracking-widest uppercase shadow-sm">
           <span>FOREVER.. ME AND YOU</span>
         </div>
       </motion.div>
@@ -79,7 +79,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mb-2 sm:mb-3 flex items-center justify-center gap-2 sm:gap-4 md:gap-6"
+          className="relative mb-1.5 sm:mb-3 flex items-center justify-center gap-1.5 sm:gap-4 md:gap-6"
         >
           {/* Left Mascot (Costa Mochi with scarf) */}
           <motion.div
@@ -92,7 +92,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               repeat: Infinity,
               ease: 'easeInOut',
             }}
-            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0"
+            className="w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0"
           >
             <LeftMascot />
           </motion.div>
@@ -107,7 +107,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               <img
                 src={SITE_CONTENT.assets.us}
                 alt={`${SITE_CONTENT.couple.yourName} & ${SITE_CONTENT.couple.partnerName}`}
-                className="w-18 h-18 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover rounded-xl border border-paper-border/60"
+                className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover rounded-xl border border-paper-border/60"
               />
               {/* Heart Accent Badge */}
               <div className="absolute -bottom-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-maroon-tint border border-maroon/30 flex items-center justify-center text-maroon shadow-xs">
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               repeat: Infinity,
               ease: 'easeInOut',
             }}
-            className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0"
+            className="w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 shrink-0"
           >
             <RightMascot />
           </motion.div>
@@ -140,17 +140,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="relative flex flex-col items-center mb-4 sm:mb-6"
+          className="relative flex flex-col items-center mb-2.5 sm:mb-6"
         >
           {/* Main Visual Headline: [YOUR_NAME] & [PARTNER_NAME] */}
-          <div className="relative inline-flex flex-wrap items-baseline justify-center gap-x-3 sm:gap-x-5 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-maroon tracking-tight leading-[0.95]">
+          <div className="relative inline-flex flex-wrap items-baseline justify-center gap-x-2 sm:gap-x-5 text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold text-maroon tracking-tight leading-[0.95]">
             <span className="relative">
               {/* [YOUR_NAME] */}
               {SITE_CONTENT.couple.yourName}
             </span>
 
             {/* Delicate Interlocking Ampersand */}
-            <span className="font-serif italic font-light text-ink/80 text-3xl sm:text-5xl md:text-6xl lg:text-7xl select-none -my-2 transform -rotate-6">
+            <span className="font-serif italic font-light text-ink/80 text-2xl sm:text-5xl md:text-6xl lg:text-7xl select-none -my-2 transform -rotate-6">
               &
             </span>
 
@@ -177,7 +177,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.55 }}
-            className="text-sm sm:text-lg md:text-xl font-hand text-ink-muted max-w-xl mx-auto mt-2 sm:mt-3 px-4 leading-relaxed"
+            className="text-xs sm:text-lg md:text-xl font-hand text-ink-muted max-w-xl mx-auto mt-1.5 sm:mt-3 px-4 leading-relaxed"
           >
             "{SITE_CONTENT.couple.firstMeetingStorySnippet}"
           </motion.p>
@@ -191,12 +191,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
           transition={{ duration: 0.9, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-2xl px-2"
         >
-          <div className="relative bg-paper-card border border-paper-border/90 rounded-2xl p-4 sm:p-6 shadow-paper">
+          <div className="relative bg-paper-card border border-paper-border/90 rounded-2xl p-3 sm:p-6 shadow-paper">
             {/* Top Washi Tape Accent */}
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 washi-tape rotate-[-1.5deg] rounded-sm z-20" />
 
             {/* Counter Header Pill */}
-            <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="flex items-center justify-center gap-2 mb-2.5 sm:mb-4">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-maroon opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-maroon" />
@@ -209,8 +209,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
             {/* Ticking Time Blocks Grid */}
             <div className="grid grid-cols-4 gap-2 sm:gap-3">
               {/* Days */}
-              <div className="flex flex-col items-center justify-center p-2.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
-                <span className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
+              <div className="flex flex-col items-center justify-center p-1.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
+                <span className="text-xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
                   {timeTogether.formatted.days}
                 </span>
                 <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-ink-muted mt-1">
@@ -219,8 +219,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               </div>
 
               {/* Hours */}
-              <div className="flex flex-col items-center justify-center p-2.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
-                <span className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
+              <div className="flex flex-col items-center justify-center p-1.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
+                <span className="text-xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
                   {timeTogether.formatted.hours}
                 </span>
                 <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-ink-muted mt-1">
@@ -229,8 +229,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               </div>
 
               {/* Minutes */}
-              <div className="flex flex-col items-center justify-center p-2.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
-                <span className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
+              <div className="flex flex-col items-center justify-center p-1.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
+                <span className="text-xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight">
                   {timeTogether.formatted.minutes}
                 </span>
                 <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-ink-muted mt-1">
@@ -239,8 +239,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
               </div>
 
               {/* Seconds */}
-              <div className="flex flex-col items-center justify-center p-2.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
-                <span className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight tabular-nums">
+              <div className="flex flex-col items-center justify-center p-1.5 sm:p-3.5 bg-paper rounded-xl border border-paper-border/80">
+                <span className="text-xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon tracking-tight tabular-nums">
                   {timeTogether.formatted.seconds}
                 </span>
                 <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-ink-muted mt-1">
@@ -250,13 +250,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToNext }) => {
             </div>
 
             {/* Sub-label with [MEET_DATE] */}
-            <div className="mt-3 pt-3 border-t border-paper-border/60 flex items-center justify-center gap-1.5 text-xs text-ink-muted font-sans">
+            <div className="mt-2 sm:mt-3 pt-2 sm:pt-3 border-t border-paper-border/60 flex items-center justify-center gap-1.5 text-[10px] sm:text-xs text-ink-muted font-sans">
               <span>Since</span>
               <span className="font-mono text-maroon font-bold">
                 {/* [MEET_DATE: 2026-7-4] */}
                 {SITE_CONTENT.couple.relationshipStartDate}
               </span>
-              <span>— counting every precious second with you</span>
+              <span className="hidden sm:inline">— counting every precious second with you</span>
               <Heart className="w-3 h-3 text-maroon fill-maroon inline ml-0.5" />
             </div>
           </div>

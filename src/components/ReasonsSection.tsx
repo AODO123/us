@@ -103,7 +103,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
   };
 
   return (
-    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-8 py-5 sm:py-7 overflow-hidden select-none bg-paper/60">
+    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-8 py-3 sm:py-7 overflow-hidden select-none bg-paper/60">
       {/* ── Ambient Floating Doodles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         <motion.div
@@ -141,7 +141,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
           <span>{reasons.sectionBadge}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight">
           {/* [REASONS_TITLE] */}
           {reasons.title}
         </h2>
@@ -153,7 +153,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
       </motion.div>
 
       {/* ── 2. CENTERPIECE: FLOATING STAGGERED TAGS CONSTELLATION + FINALE ── */}
-      <div className="relative z-10 w-full max-w-5xl h-[64vh] sm:h-[68vh] my-auto flex items-center justify-center">
+      <div className="relative z-10 w-full max-w-5xl h-[58vh] sm:h-[68vh] my-auto flex items-center justify-center">
         {/* ── DESKTOP SCATTERED CONSTELLATION CANVAS (hidden on mobile, visible sm+) ── */}
         <div className="hidden sm:block absolute inset-0 w-full h-full">
           {REASONS_LIST.map((reason, index) => {
@@ -297,7 +297,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
               className="relative z-30 max-w-sm sm:max-w-md w-full mx-auto text-center"
             >
               {/* Centerpiece Paper Card */}
-              <div className="relative bg-paper-card border-2 border-maroon/40 rounded-3xl p-6 sm:p-8 shadow-paper-float overflow-hidden">
+              <div className="relative bg-paper-card border-2 border-maroon/40 rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-paper-float overflow-hidden">
                 {/* Top Center Washi Tape */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-6 washi-tape rotate-[-1deg] rounded-sm z-20" />
 
@@ -321,7 +321,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
                   </div>
 
                   {/* "YOU ARE HOME" Title */}
-                  <h3 className="text-3xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight capitalize my-1">
+                  <h3 className="text-2xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight capitalize my-1">
                     {/* [FINALE_REASON] */}
                     "{FINALE_REASON}"
                   </h3>
@@ -373,7 +373,7 @@ export const ReasonsSection: React.FC<ReasonsSectionProps> = () => {
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
+        <div className="hidden sm:flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
           <span>forever yours, honey</span>
           <Heart className="w-3.5 h-3.5 fill-maroon text-maroon inline" />
         </div>

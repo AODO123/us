@@ -149,9 +149,9 @@ export const CinematicStage: React.FC<CinematicStageProps> = ({ onRelockGate }) 
   return (
     <div className="relative w-full h-screen max-h-screen overflow-hidden bg-paper text-ink selection:bg-maroon-tint selection:text-maroon">
       {/* ── Fixed Floating Top Bar ── */}
-      <div className="fixed top-5 left-6 right-6 z-40 flex items-center justify-between pointer-events-none">
-        {/* Subtle Current Chapter Pill */}
-        <div className="pointer-events-auto inline-flex items-center gap-2 px-3 py-1 rounded-full bg-paper-card/85 backdrop-blur-md border border-paper-border text-[11px] font-mono text-ink-muted shadow-xs">
+      <div className="fixed top-3 sm:top-5 left-4 sm:left-6 right-4 sm:right-6 z-40 flex items-center justify-end sm:justify-between pointer-events-none">
+        {/* Subtle Current Chapter Pill — hidden on phones, visible from tablet up */}
+        <div className="pointer-events-auto hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-paper-card/85 backdrop-blur-md border border-paper-border text-[11px] font-mono text-ink-muted shadow-xs">
           <span className="w-1.5 h-1.5 rounded-full bg-maroon" />
           <span>Chapter {SCENE_NAMES[activeScene].label} / {SCENE_NAMES[activeScene].title}</span>
         </div>
@@ -159,7 +159,7 @@ export const CinematicStage: React.FC<CinematicStageProps> = ({ onRelockGate }) 
         {/* Replay Gate Button */}
         <button
           onClick={onRelockGate}
-          className="pointer-events-auto flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-paper-card/85 backdrop-blur-md border border-paper-border text-ink-muted hover:text-maroon hover:border-maroon/30 text-xs font-mono transition-all shadow-xs cursor-pointer hover:scale-105 active:scale-95"
+          className="pointer-events-auto flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 rounded-full bg-paper-card/85 backdrop-blur-md border border-paper-border text-ink-muted hover:text-maroon hover:border-maroon/30 text-xs font-mono transition-all shadow-xs cursor-pointer hover:scale-105 active:scale-95"
           title="Re-lock gate"
         >
           <RefreshCw className="w-3.5 h-3.5" />
@@ -168,7 +168,7 @@ export const CinematicStage: React.FC<CinematicStageProps> = ({ onRelockGate }) 
       </div>
 
       {/* ── Fixed Floating Right Pagination Dots ── */}
-      <div className="fixed right-4 sm:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-3">
+      <div className="fixed right-2 sm:right-6 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2 sm:gap-3">
         {SCENE_NAMES.map((scene, idx) => {
           const isActive = idx === activeScene;
           return (

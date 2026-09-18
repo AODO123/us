@@ -98,7 +98,7 @@ export const CommonSection: React.FC<CommonSectionProps> = () => {
   };
 
   return (
-    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-8 py-5 sm:py-7 overflow-hidden select-none bg-paper/60">
+    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-8 py-3 sm:py-7 overflow-hidden select-none bg-paper/60">
       {/* ── Ambient Background Floating Doodles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         <motion.div
@@ -129,7 +129,7 @@ export const CommonSection: React.FC<CommonSectionProps> = () => {
           <span>{common.sectionBadge}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight lowercase">
+        <h2 className="text-xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight lowercase">
           {/* [COMMON_TITLE] */}
           {common.title}
         </h2>
@@ -141,7 +141,7 @@ export const CommonSection: React.FC<CommonSectionProps> = () => {
       </motion.div>
 
       {/* ── 2. CENTERPIECE: CONSTELLATION WEB + "OUR HEARTS" FINALE ── */}
-      <div className="relative z-10 w-full max-w-5xl h-[64vh] sm:h-[68vh] my-auto flex items-center justify-center">
+      <div className="relative z-10 w-full max-w-5xl h-[58vh] sm:h-[68vh] my-auto flex items-center justify-center">
         {/* ── DESKTOP CONSTELLATION CANVAS (hidden on mobile, visible sm+) ── */}
         <div className="hidden sm:block absolute inset-0 w-full h-full">
           {/* Constellation SVG Lines Canvas */}
@@ -529,7 +529,7 @@ export const CommonSection: React.FC<CommonSectionProps> = () => {
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
+        <div className="hidden sm:flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
           <span>forever yours, honey</span>
           <Heart className="w-3.5 h-3.5 fill-maroon text-maroon inline" />
         </div>

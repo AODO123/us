@@ -50,7 +50,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
   };
 
   return (
-    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-6 py-5 sm:py-7 overflow-hidden select-none bg-paper/75">
+    <div className="relative w-full h-full min-h-screen max-h-screen flex flex-col justify-between items-center px-3 sm:px-6 py-3 sm:py-7 overflow-hidden select-none bg-paper/75">
       {/* ── Ambient Background Floating Doodles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
         <motion.div
@@ -88,7 +88,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
           <span>{LETTER_DATA.badge}</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight">
+        <h2 className="text-2xl sm:text-5xl font-serif font-bold text-maroon tracking-tight leading-tight">
           {LETTER_DATA.title}
         </h2>
 
@@ -98,7 +98,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
       </motion.div>
 
       {/* ── 2. CENTERPIECE: ENVELOPE / UNFOLDED LETTER ── */}
-      <div className="relative z-20 w-full max-w-4xl h-[66vh] sm:h-[70vh] my-auto flex items-center justify-center">
+      <div className="relative z-20 w-full max-w-4xl h-[62vh] sm:h-[70vh] my-auto flex items-center justify-center">
         <AnimatePresence mode="wait">
           {!isOpen ? (
             /* ── STATE A: CLOSED VINTAGE ENVELOPE WITH WAX SEAL ── */
@@ -113,7 +113,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
               {/* Envelope Body Card */}
               <div
                 onClick={handleOpenEnvelope}
-                className="group relative w-full bg-[#FAF5EE] border-2 border-paper-border rounded-2xl p-6 sm:p-8 shadow-paper-float hover:shadow-paper-lg cursor-pointer transition-all duration-300 overflow-hidden"
+                className="group relative w-full bg-[#FAF5EE] border-2 border-paper-border rounded-2xl p-4 sm:p-8 shadow-paper-float hover:shadow-paper-lg cursor-pointer transition-all duration-300 overflow-hidden"
               >
                 {/* Washi tape on corners */}
                 <div className="absolute -top-3 left-8 w-24 h-6 washi-tape rotate-[-3deg] rounded-sm z-20" />
@@ -128,12 +128,12 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
                 </div>
 
                 {/* Envelope Flap Fold Illusion */}
-                <div className="relative z-10 pt-4 pb-8 flex flex-col items-center text-center">
-                  <h3 className="font-hand font-bold text-2xl sm:text-3xl text-maroon tracking-wide mb-3">
+                <div className="relative z-10 pt-2 sm:pt-4 pb-4 sm:pb-8 flex flex-col items-center text-center">
+                  <h3 className="font-hand font-bold text-xl sm:text-3xl text-maroon tracking-wide mb-2 sm:mb-3">
                     {LETTER_DATA.envelopeLabel}
                   </h3>
 
-                  <p className="text-xs sm:text-sm font-serif italic text-ink-muted max-w-xs mb-8">
+                  <p className="text-xs sm:text-sm font-serif italic text-ink-muted max-w-xs mb-4 sm:mb-8">
                     A handwritten letter from my heart, sealed exclusively for your eyes.
                   </p>
 
@@ -151,7 +151,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
                       whileHover={{ scale: 1.1, rotate: [0, -3, 3, 0] }}
                       whileTap={{ scale: 0.95 }}
                       onClick={handleOpenEnvelope}
-                      className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#8E2234] via-[#7A1C2B] to-[#59141F] text-paper-card border-4 border-[#9E2A3B]/40 shadow-tactile flex flex-col items-center justify-center cursor-pointer transition-transform"
+                      className="relative w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-[#8E2234] via-[#7A1C2B] to-[#59141F] text-paper-card border-4 border-[#9E2A3B]/40 shadow-tactile flex flex-col items-center justify-center cursor-pointer transition-transform"
                       aria-label="Break wax seal and read letter"
                     >
                       {/* Wax Stamp Rim Effect */}
@@ -169,7 +169,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
                   <motion.div
                     animate={{ y: [0, 4, 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                    className="mt-6 inline-flex items-center gap-1.5 text-xs font-hand font-bold text-maroon bg-pastel-blush/60 px-3.5 py-1 rounded-full border border-maroon/20"
+                    className="mt-4 sm:mt-6 inline-flex items-center gap-1.5 text-xs font-hand font-bold text-maroon bg-pastel-blush/60 px-3.5 py-1 rounded-full border border-maroon/20"
                   >
                     <span>Click the wax seal to open 💌</span>
                   </motion.div>
@@ -347,7 +347,7 @@ export const FinalLetterSection: React.FC<FinalLetterSectionProps> = ({
           <span>My Letter • Forever Mode</span>
         </div>
 
-        <div className="flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
+        <div className="hidden sm:flex items-center gap-1.5 font-hand text-sm text-maroon font-bold">
           <span>Costa & Daria Forever</span>
           <Heart className="w-3.5 h-3.5 fill-maroon text-maroon inline" />
         </div>

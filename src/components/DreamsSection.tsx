@@ -63,7 +63,7 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
   };
 
   return (
-    <div className="relative w-full h-screen max-h-screen overflow-hidden bg-paper text-ink flex flex-col justify-between p-3 sm:p-5 md:p-6 select-none">
+    <div className="relative w-full h-screen max-h-screen overflow-hidden bg-paper text-ink flex flex-col justify-between p-2.5 sm:p-5 md:p-6 select-none">
       {/* ── Background Scrapbook Atmosphere Doodles ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Subtle grid texture */}
@@ -95,7 +95,7 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
       </div>
 
       {/* ── Header: Section Title & Subtitle ── */}
-      <div className="relative z-10 text-center max-w-2xl mx-auto pt-7 sm:pt-5">
+      <div className="relative z-10 text-center max-w-2xl mx-auto pt-3 sm:pt-5">
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +112,7 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
           transition={{ duration: 0.55, delay: 0.08 }}
           className="relative inline-block"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-maroon tracking-tight">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-serif font-bold text-maroon tracking-tight">
             {dreams.title}
           </h2>
           <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-32 sm:w-44 opacity-85">
@@ -334,14 +334,14 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: -15 }}
               transition={{ duration: 0.35 }}
-              className="relative w-full bg-paper-card border border-paper-border rounded-2xl p-4 shadow-paper-lg"
+              className="relative w-full bg-paper-card border border-paper-border rounded-2xl p-3 sm:p-4 shadow-paper-lg"
             >
               {/* Tape */}
               <div
                 className={`absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-5.5 ${WASHI_TAPES[activeMobileIndex % WASHI_TAPES.length]} rotate-[-1deg] z-20 shadow-xs rounded-[1px]`}
               />
 
-              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center justify-between mb-2">
                 <span className="text-[10px] font-mono font-medium tracking-wider text-maroon uppercase bg-maroon-tint px-2.5 py-0.5 rounded-md">
                   {DREAMS_LIST[activeMobileIndex].tag}
                 </span>
@@ -352,8 +352,8 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
 
               {/* If photo exists - Raised crop to top */}
               {DREAMS_LIST[activeMobileIndex].image && (
-                <div className="bg-paper-light p-2 rounded-xl border border-paper-border shadow-inner mb-3">
-                  <div className="aspect-[4/3] w-full overflow-hidden rounded-lg bg-paper-aged">
+                <div className="bg-paper-light p-1.5 rounded-xl border border-paper-border shadow-inner mb-2">
+                  <div className="aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden rounded-lg bg-paper-aged">
                     <img
                       src={DREAMS_LIST[activeMobileIndex].image}
                       alt={DREAMS_LIST[activeMobileIndex].imageAlt}
@@ -368,7 +368,7 @@ export const DreamsSection: React.FC<DreamsSectionProps> = () => {
                 </div>
               )}
 
-              <h3 className="font-serif font-bold text-base text-ink mb-1.5">
+              <h3 className="font-serif font-bold text-sm sm:text-base text-ink mb-1">
                 {DREAMS_LIST[activeMobileIndex].title}
               </h3>
               <p className="text-xs text-ink-muted font-sans italic leading-relaxed">
